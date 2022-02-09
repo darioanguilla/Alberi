@@ -5,7 +5,7 @@ public class Albero {
     Albero sx;
     Albero dx;
 
-    //Costruttore
+    //Costruttori
     public Albero(){
     }
 
@@ -21,6 +21,7 @@ public class Albero {
         this.dx=dx;
     }
 
+    //Metodi
     public int getValue() {
         return value;
     }

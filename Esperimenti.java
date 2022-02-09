@@ -6,6 +6,8 @@ public class Esperimenti {
         Albero p = new Albero(10, s, d);
         Albero c=creaUguali(0, 5);
         stampa(p);
+        System.out.println();
+        stampa(c);
         
     }
 
