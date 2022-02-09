@@ -4,8 +4,9 @@ public class Esperimenti {
         Albero s = new Albero(9);
         Albero d = new Albero(11);
         Albero p = new Albero(10, s, d);
-        System.out.println(contiene(p, 24));
-
+        Albero c=creaUguali(0, 5);
+        stampa(p);
+        
     }
 
     static void printAll(Albero a) {
@@ -27,4 +28,30 @@ public class Esperimenti {
   
         return (contiene(a.getDx(), val) || contiene(a.getSx(), val));
     }
+
+    static Albero creaUguali(int val, int n) {
+        //Crea un albero di n livelli i cui nodi hanno tutti valore val
+        if (n == 0)
+            return null;
+        
+        Albero root = new Albero(val, creaUguali(val, n-1), creaUguali(val, n-1));
+
+        return root;
+    }
+
+    public static void stampa(Albero a) {
+        //Stampa un albero con notazione parentetica
+        //Albero vuoto ()
+        //Albero non vuoto (val (sx) (dx))
+        if(a==null) {
+          System.out.print("()");
+          return;
+        }
+    
+        System.out.print("("+a.getValue() + " ");
+        stampa(a.getSx());
+        System.out.print(" ");
+        stampa(a.getDx());
+        System.out.print(")");
+      }
 }
