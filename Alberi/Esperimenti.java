@@ -1,16 +1,18 @@
+package Alberi;
 public class Esperimenti {
     public static void main(String[] args) {
-
-        Albero s = new Albero(9);
-        Albero d = new Albero(11);
-        Albero p = new Albero(10, s, d);
-        Albero c=creaUguali(0, 5);
-        stampa(p);
-        System.out.println();
-        stampa(c);
-        
+        Albero sx = new Albero(1);
+        Albero dx = new Albero(3);
+        Albero p = new Albero(2,sx,dx);
+        System.out.println(p.getRx().getLevel());
+        System.out.println(p.getSx().getRx().getLevel());
+        System.out.println(p.getDx().getRx().getLevel());
     }
-
+}
+    /*
+    TO_DO: 
+    1) trasformare il codice da procedurale ad OOP
+    
     static void printAll(Albero a) {
         //Stampa tutto un albero
         if(a==null) return;
@@ -56,4 +58,4 @@ public class Esperimenti {
         stampa(a.getDx());
         System.out.print(")");
       }
-}
+    */
