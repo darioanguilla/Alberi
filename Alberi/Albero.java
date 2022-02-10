@@ -4,7 +4,7 @@ public class Albero extends Nodo {
     //Attributi
     private Nodo rx; //La radice è un nodo
     private Albero sx; //Sottoalbero sinistro
-    private Albero dx; //Sottoalbero sinistro
+    private Albero dx; //Sottoalbero destro
 
     //Costruttori
     public Albero(){
@@ -22,9 +22,9 @@ public class Albero extends Nodo {
     public Albero(int v, Albero s, Albero d){
         rx = new Nodo(v);
         sx = new Albero(s.rx.getValue());
-        sx.setLevel(s.rx.getLevel()+1);
+        sx.rx.setLevel(s.rx.getLevel()+1);
         dx = new Albero(d.rx.getValue());
-        dx.setLevel(d.rx.getLevel()+1);
+        dx.rx.setLevel(d.rx.getLevel()+1);
     }
 
     //Metodi
