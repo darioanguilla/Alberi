@@ -1,12 +1,7 @@
 package Alberi;
 public class Esperimenti {
     public static void main(String[] args) {
-        Albero sx = new Albero(1);
-        Albero dx = new Albero(3);
-        Albero p = new Albero(2,sx,dx);
-        System.out.println(p.getRx().getLevel());
-        System.out.println(p.getSx().getRx().getLevel());
-        System.out.println(p.getDx().getRx().getLevel());
+     
     }
 }
     /*
