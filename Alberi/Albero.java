@@ -26,7 +26,7 @@ public class Albero extends Nodo {
     }
 
     public Albero(Albero r){
-        rx = new Albero(r.getRx());
+        rx = new Nodo(r.getRx());
         if (r.getSx() != null){
             sx = new Albero(r.getSx());
         } else {
@@ -40,7 +40,7 @@ public class Albero extends Nodo {
     }
 
     public Albero(Nodo r, Nodo s, Nodo d){
-        rx = r;
+        rx = new Nodo(r);
         if (s != null){
             sx = new Albero(s);
         } else {
