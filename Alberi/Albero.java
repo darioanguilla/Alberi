@@ -27,8 +27,16 @@ public class Albero extends Nodo {
 
     public Albero(Albero r){
         rx = new Albero(r.getRx());
-        sx = new Albero(r.getSx());
-        dx = new Albero(r.getDx());
+        if (r.getSx() != null){
+            sx = new Albero(r.getSx());
+        } else {
+            sx = new Albero();
+        }
+        if (r.getDx() != null){
+            dx = new Albero(r.getDx());
+        } else {
+            dx = new Albero();
+        }
     }
 
     public Albero(Nodo r, Nodo s, Nodo d){
@@ -46,14 +54,14 @@ public class Albero extends Nodo {
     }
 
     public Albero(Nodo r, Albero s, Albero d){
-        rx = r;
+        rx = new Nodo(r);
         if  (s != null){
-            sx = new Albero(s);
+            sx = new Albero(s.getRx(), s.getSx(), s.getDx());
         } else {
             sx = new Albero();
         }
         if  (d != null){
-            dx = new Albero(d);
+            dx = new Albero(d.getRx(), d.getSx(), d.getDx());
         } else {
             dx = new Albero();
         }
