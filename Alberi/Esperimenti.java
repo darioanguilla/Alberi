@@ -1,7 +1,17 @@
 package Alberi;
 public class Esperimenti {
     public static void main(String[] args) {
-     
+      Nodo n1 = new Nodo(1);
+      Nodo n2 = new Nodo(2);
+      Nodo n3 = new Nodo(3);
+      Albero a1 = new Albero(n1,n2,n3);
+      Nodo n4 = new Nodo(4);
+      Albero a2 = new Albero(n4, a1, a1);
+      Nodo n5 = new Nodo(5);
+      Albero a3 = new Albero(n5, a2, a2);
+      System.out.println(a3.getRx().getLevel());
+      System.out.println(a3.getSx().getRx().getLevel());
+      System.out.println(a3.getSx().getDx().getRx().getLevel());
     }
 }
     /*
